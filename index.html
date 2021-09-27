@@ -9,9 +9,7 @@
 		<link rel="stylesheet" href="assets/css/main1.css" />
 
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-		.invalid-feedback{
-			display:none;color:red;}</style>
+		
 	</head>
 	<body class="is-preload">
 
@@ -333,18 +331,17 @@
 							<article id="contact">
 								<h2 class="major">Hire ME</h2>
 						
-								<form method="POST" action="#" name="contactForm"  action="" novalidate="novalidate" class='needs-validation' data-netlify="true">
+								<form method="POST" name="contactForm"  action=""  class='needs-validation' data-netlify="true" validate>
 									<div class="fields">
 										<div class="field half">
 											<input type="text" name="name" id="name" placeholder="Name" required/>
-											<div class="invalid-feedback">Missing name</div>
+											
 										</div>
 										<div class="field half">
 											<input type="email" name="email" id="email" placeholder="Email" required/>
-											<div class="invalid-feedback">Please provide a valid email address.</div>
 										</div>
 										<div class="field">
-											<textarea name="message" id="message" rows="3"  placeholder="Message" required><div class="invalid-feedback">Please include a message before submitting.</div></textarea>
+											<textarea name="message" id="message" rows="3"  placeholder="Message" required></textarea>
 										</div>
 									</div>
 									<ul class="actions">
@@ -374,24 +371,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-		<script>// form validation
-(function () {
-    'use strict';
-    window.addEventListener('load', function () {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('contactForm');
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function (form) {
-            form.addEventListener('submit', function (event) {
-                if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
-        });
-    }, false);
-})();</script>
+		
 
 	</body>
 </html>
